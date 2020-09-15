@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视频</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <style>
+      body {
+        position: relative;
+        overflow: hidden;
+      }
+      html,body{
+        width: 100%;
+        height: 100%;
+        margin:0;
+        padding: 0;
+      }
+      .loading,.main,.end {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: #000;
+        justify-content: center;
+        align-items: center;
+      }
+      .wrapper .video {
+          width: 100%;
+          height: 100%;
+      }
+    </style>
+</head>
+<body>
+  <div id="o2_main" class="main">
+    <div class="wrapper">
+      <video id="video" class="video" preload="auto" autoplay loop playsinline src="./1.mp4" width="1" height="1" type="video/mp4"></video>
+    </div>
+  </div>
+<script src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+<script src="js/jquery-1.7.2.js"></script>
+ <script src="js/zepto.js"></script>
+ <script src="js/video.min.js"></script>
+</body>
+</html>
