@@ -36,12 +36,22 @@
 <body>
   <div id="o2_main" class="main">
     <div class="wrapper">
-      <video id="video" muted="muted" class="video" preload="auto" autoplay loop playsinline src="./1.mp4" width="1" height="1" type="video/mp4"></video>
+      <video id="video" muted="muted" class="video" preload="auto" autoplay loop  x-webkit-airplay="allow"
+       x5-video-player-type="h5"
+       x5-video-player-fullscreen="true"
+       x5-video-orientation="portrait"
+       webkit-playsinline playsinline src="./1.mp4" width="1" height="1" type="video/mp4"></video>
     </div>
   </div>
 <script src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
 <script src="jquery-1.7.2.js"></script>
  <script src="zepto.js"></script>
  <script src="video.min.js"></script>
+ <script>
+     wx.ready(function(){
+        var video=document.getElementById('video');
+        video.play()
+     })
+ </script>
 </body>
 </html>
