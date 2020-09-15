@@ -48,10 +48,14 @@
  <script src="zepto.js"></script>
  <script src="video.min.js"></script>
  <script>
-     wx.ready(function(){
-        var video=document.getElementById('video');
-        video.play()
-     })
+     document.addEventListener(
+        'WeixinJSBridgeReady',
+        function() {
+            var video = document.getElementById("video");
+            video.play();
+        },
+        false
+    );
  </script>
 </body>
 </html>
